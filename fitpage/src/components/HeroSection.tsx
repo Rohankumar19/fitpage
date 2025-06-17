@@ -1,16 +1,11 @@
-
 import React from "react";
 import { FlipWords } from "@/components/ui/flip-words";
-import { ThemeToggle } from "@/components/ThemeToggle";
 
 export default function HeroSection() {
   const words = ["amazing", "quality", "trusted", "premium"];
   
   return (
     <div className="min-h-screen bg-black relative">
-      <div className="absolute top-4 right-4 z-50">
-        <ThemeToggle />
-      </div>
       <div className="container mx-auto px-4 py-20">
         <div className="px-4 py-10 md:px-8 md:py-10 lg:col-span-2">
           <h2 className="text-center text-2xl font-bold tracking-tight text-white sm:text-left sm:text-4xl lg:text-7xl">
