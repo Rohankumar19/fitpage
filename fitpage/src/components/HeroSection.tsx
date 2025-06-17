@@ -4,6 +4,14 @@ import { FlipWords } from "@/components/ui/flip-words";
 export default function HeroSection() {
   const words = ["amazing", "quality", "trusted", "premium"];
   
+  const scrollToProducts = () => {
+    // Scroll to the search and filter section in the main page
+    const searchSection = document.querySelector('.container.mx-auto.px-4.py-12');
+    if (searchSection) {
+      searchSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+  
   return (
     <div className="min-h-screen bg-black relative">
       <div className="container mx-auto px-4 py-20">
@@ -19,11 +27,11 @@ export default function HeroSection() {
             <span className="text-yellow-400 font-semibold">authentic feedback</span>.
           </p>
           <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row">
-            <button className="rounded-lg bg-yellow-400 px-4 py-2 text-base font-bold text-black hover:shadow-lg transition">
+            <button 
+              onClick={scrollToProducts}
+              className="rounded-lg bg-yellow-400 px-4 py-2 text-base font-bold text-black hover:shadow-lg transition"
+            >
               Explore Products
-            </button>
-            <button className="rounded-lg border border-transparent px-4 py-2 text-base text-white hover:border-yellow-500 transition">
-              Learn More
             </button>
           </div>
         </div>

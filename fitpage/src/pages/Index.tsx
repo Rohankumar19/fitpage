@@ -9,6 +9,18 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import HeroSection from '@/components/HeroSection';
 import Footer from '@/components/Footer';
 
+// Import local images
+import gamingLaptop from '@/images/asus-rog-zephyrus-m16-2023-gaming-laptop-1536x864.jpg';
+import summerDress from '@/images/summerdress.jpg';
+import ergonomicChair from '@/images/ergonomicchair.webp';
+import greatGatsby from '@/images/thegreatgatsby.jpg';
+import basketball from '@/images/basketball.webp';
+import headphones from '@/images/headphones.webp';
+import leatherJacket from '@/images/leatherjaket.jpg';
+import gardenTools from '@/images/gardentools.jpg';
+import harryPotter from '@/images/harrypotter.jpg';
+import yogaMat from '@/images/yogamat.jpg';
+
 interface Product {
   id: number;
   name: string;
@@ -35,7 +47,7 @@ const productsData: Product[] = [
     description: 'High-performance laptop for gaming enthusiasts.',
     category: 'electronics',
     price: 1200,
-    imageUrl: 'https://images.unsplash.com/photo-1560179724-654a0ca408c3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
+    imageUrl: gamingLaptop,
   },
   {
     id: 2,
@@ -43,7 +55,7 @@ const productsData: Product[] = [
     description: 'Elegant summer dress for women.',
     category: 'clothing',
     price: 60,
-    imageUrl: 'https://images.unsplash.com/photo-1585346374669-935a69c61999?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
+    imageUrl: summerDress,
   },
   {
     id: 3,
@@ -51,7 +63,7 @@ const productsData: Product[] = [
     description: 'Comfortable chair for long working hours.',
     category: 'home',
     price: 250,
-    imageUrl: 'https://images.unsplash.com/photo-1562447834-85e143d0e967?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
+    imageUrl: ergonomicChair,
   },
   {
     id: 4,
@@ -59,7 +71,7 @@ const productsData: Product[] = [
     description: 'Classic novel by F. Scott Fitzgerald.',
     category: 'books',
     price: 15,
-    imageUrl: 'https://images.unsplash.com/photo-1544947950-fa07a98d669a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
+    imageUrl: greatGatsby,
   },
   {
     id: 5,
@@ -67,7 +79,7 @@ const productsData: Product[] = [
     description: 'Official size and weight basketball.',
     category: 'sports',
     price: 25,
-    imageUrl: 'https://images.unsplash.com/photo-1554909474-3a68e6a06b7c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
+    imageUrl: basketball,
   },
   {
     id: 6,
@@ -75,7 +87,7 @@ const productsData: Product[] = [
     description: 'Over-ear headphones with active noise cancellation.',
     category: 'electronics',
     price: 180,
-    imageUrl: 'https://images.unsplash.com/photo-1583394842264-10b2e4659d56?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80',
+    imageUrl: headphones,
   },
   {
     id: 7,
@@ -83,7 +95,7 @@ const productsData: Product[] = [
     description: 'Classic leather jacket for men.',
     category: 'clothing',
     price: 150,
-    imageUrl: 'https://images.unsplash.com/photo-1588075592484-393b04cbb75a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
+    imageUrl: leatherJacket,
   },
   {
     id: 8,
@@ -91,7 +103,7 @@ const productsData: Product[] = [
     description: 'Set of essential tools for gardening.',
     category: 'home',
     price: 45,
-    imageUrl: 'https://images.unsplash.com/photo-1618224435344-958c71484091?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
+    imageUrl: gardenTools,
   },
   {
     id: 9,
@@ -99,7 +111,7 @@ const productsData: Product[] = [
     description: 'The first book in the Harry Potter series.',
     category: 'books',
     price: 20,
-    imageUrl: 'https://images.unsplash.com/photo-1610587542394-2c6e5ba16863?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
+    imageUrl: harryPotter,
   },
   {
     id: 10,
@@ -107,7 +119,7 @@ const productsData: Product[] = [
     description: 'Non-slip yoga mat for exercise.',
     category: 'sports',
     price: 30,
-    imageUrl: 'https://images.unsplash.com/photo-1584824486509-112e4181ff6b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
+    imageUrl: yogaMat,
   },
 ];
 

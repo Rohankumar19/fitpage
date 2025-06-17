@@ -1,7 +1,6 @@
-
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { Star, ArrowLeft, Upload } from 'lucide-react';
+import { Star, ArrowLeft, Upload, Image as ImageIcon } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -11,6 +10,18 @@ import { Label } from '@/components/ui/label';
 import { useToast } from '@/hooks/use-toast';
 import Footer from '@/components/Footer';
 import { extractTags } from '@/utils/tagExtraction';
+
+// Import all available images
+import gamingLaptop from '@/images/asus-rog-zephyrus-m16-2023-gaming-laptop-1536x864.jpg';
+import summerDress from '@/images/summerdress.jpg';
+import ergonomicChair from '@/images/ergonomicchair.webp';
+import greatGatsby from '@/images/thegreatgatsby.jpg';
+import basketball from '@/images/basketball.webp';
+import headphones from '@/images/headphones.webp';
+import leatherJacket from '@/images/leatherjaket.jpg';
+import gardenTools from '@/images/gardentools.jpg';
+import harryPotter from '@/images/harrypotter.jpg';
+import yogaMat from '@/images/yogamat.jpg';
 
 interface Product {
   id: number;
@@ -177,6 +188,20 @@ const ProductDetail = () => {
   }
 
   const tags = getProductTags();
+
+  // All available images for the gallery
+  const allImages = [
+    { src: gamingLaptop, alt: 'Gaming Laptop', name: 'Gaming Laptop' },
+    { src: summerDress, alt: 'Summer Dress', name: 'Summer Dress' },
+    { src: ergonomicChair, alt: 'Ergonomic Chair', name: 'Ergonomic Chair' },
+    { src: greatGatsby, alt: 'The Great Gatsby', name: 'The Great Gatsby' },
+    { src: basketball, alt: 'Basketball', name: 'Basketball' },
+    { src: headphones, alt: 'Headphones', name: 'Headphones' },
+    { src: leatherJacket, alt: 'Leather Jacket', name: 'Leather Jacket' },
+    { src: gardenTools, alt: 'Garden Tools', name: 'Garden Tools' },
+    { src: harryPotter, alt: 'Harry Potter', name: 'Harry Potter' },
+    { src: yogaMat, alt: 'Yoga Mat', name: 'Yoga Mat' },
+  ];
 
   return (
     <div className="min-h-screen bg-white dark:bg-gray-950">
